@@ -4,7 +4,8 @@ const port = 4500
 
 const mongoose = require('mongoose')
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb+srv://swlee:1234@boilerplate.mklpftc.mongodb.net/?retryWrites=true&w=majority',{
+const config = require('./config/key')
+mongoose.connect(config.mongoURI,{
     useNewUrlParser:true, useUnifiedTopology:true
 }).then(()=> console.log('MongoDB Connected...'))
     .catch(err => console.log(err))
