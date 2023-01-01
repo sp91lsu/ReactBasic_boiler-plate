@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 6000
+const port = 4500
 
 const mongoose = require('mongoose')
 mongoose.set('strictQuery', true);
@@ -17,7 +17,9 @@ app.use(bodyParser.urlencoded({extended: true}))
 //application/json
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => res.send('Hello World!~~안녕하세요'))
+
+//Routing -----------------------
+app.get('/', (req, res) => res.send('Hello World!~~새해복 많이받으세요'))
 
 app.post('/register', (req, res) => {
 
