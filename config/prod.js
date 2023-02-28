@@ -1,3 +1,2 @@
-module.exports = {
-    mongoURI:  process.env.MONGO_URI
-}
+export const mongoURI_Prod = process.env.MONGO_URI
+

@@ -1,5 +1,11 @@
+import {mongoURI_Prod} from "./prod.js";
+import {mongoURI_Dev} from "./dev.js";
+
+let mongoURI_ = ''
 if (process.env.NODE_ENV === "production") {
-    module.exports = require("./prod")
+    mongoURI_ = mongoURI_Prod
 } else {
-    module.exports = require("./dev")
+    mongoURI_ = mongoURI_Dev
 }
+
+export const mongoURI = mongoURI_;
